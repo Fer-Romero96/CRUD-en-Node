@@ -1,0 +1,35 @@
+<h1>Lista de productos</h1>
+
+<table style="width:100%">
+    <tr>
+        <th><h3>ID</h3></th>
+        <th><h3>Nombre</h3></th>
+        <th><h3>Descripción</h3></th>
+        <th><h3>Precio</h3></th>
+  </tr>
+    {{#each products}}
+    <tr>
+        <th>{{ id }}</th>
+        <th>{{ name }}</th>
+        <th>{{descripcion}}</th>
+        <th>{{price}}</th>
+    </tr>
+    {{/each}}
+</table>
+<div>
+    <button onclick="window.location.href='./products/create'">Agregar Nuevo Producto</button>
+    <form method="GET" action="/products/id">
+        <div>
+            <label for="id">Buscar Producto por ID:</label>
+            <input type="text" id="id" name="id">
+            <input type="submit" value="Buscar">
+        </div>
+    </form>
+</div>
+
+
+
+
+
+
+
